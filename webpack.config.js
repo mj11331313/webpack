@@ -11,7 +11,11 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].js',
+<<<<<<< HEAD
         publicPath:'http://127.0.0.1:8082/'
+=======
+        publicPath:'http://127.0.0.1:8081/'
+>>>>>>> 508aa8cc4efdbd02ed0be8f2e8646cd730c40080
     },
     module: {
         rules: [
