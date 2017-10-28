@@ -39,6 +39,9 @@ module.exports = {
             },{//打包html中的图片(img标签)
                 test: /\.(html|htm)$/i,//i:不区分大小写
                 use: ['html-withimg-loader']
+            },{
+                test:/\.scss/,
+                use:['style-loader','css-loader','sass-loader']
             }
         ]
     },
