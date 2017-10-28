@@ -6,6 +6,7 @@ const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const PurifyCSSPlugin = require('purifycss-webpack');
 const webpack = require('webpack');
 const entry = require('./webpack_config/entry_webpack.js');//模块化配置
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
     entry: entry,
     output: {
@@ -87,6 +88,19 @@ module.exports = {
         }),
         //所有权声明(不必要的)：
         new webpack.BannerPlugin('Made by Cynthia_mj11331313'),
+        new webpack.ProvidePlugin({
+            $:'jquery'
+        }),
+        new webpack.optimize.CommonsChunkPlugin({
+            //name对应入口文件中的名字
+            name:['jquery','vue'],
+            filename:'assets/js/[name].js',//出口文件路径
+            minChunks:2//固定写法
+        }),
+        new CopyWebpackPlugin([{
+            from:__dirname + '/src/public',
+            to:'./public'
+        }])
         
     ],
     devServer: {
