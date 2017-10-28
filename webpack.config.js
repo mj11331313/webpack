@@ -4,18 +4,14 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const PurifyCSSPlugin = require('purifycss-webpack');
+const webpack = require('webpack');
+const entry = require('./webpack_config/entry_webpack.js');//模块化配置
 module.exports = {
-    entry: {
-        entry: './src/index.js',
-    },
+    entry: entry,
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].js',
-<<<<<<< HEAD
-        publicPath:'http://127.0.0.1:8082/'
-=======
-        publicPath:'http://127.0.0.1:8081/'
->>>>>>> 508aa8cc4efdbd02ed0be8f2e8646cd730c40080
+        publicPath:'http://127.0.0.1:8082/'//图片文件路径问题
     },
     module: {
         rules: [
@@ -88,7 +84,9 @@ module.exports = {
         // new UglifyJSPlugin()
         new PurifyCSSPlugin({
             paths: glob.sync(path.join(__dirname, 'src/*.html')),
-        })
+        }),
+        //所有权声明(不必要的)：
+        new webpack.BannerPlugin('Made by Cynthia_mj11331313'),
         
     ],
     devServer: {
