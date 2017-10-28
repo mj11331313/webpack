@@ -57,6 +57,17 @@ module.exports = {
                     }],
                     fallback:'style-loader'
                 })
+            },{
+                test:/\.(jsx|js)$/,
+                use:{
+                    loader:'babel-loader',
+                    options:{
+                        presets:[
+                            "es2015","react"
+                        ]
+                    }
+                },
+                exclude:/node_moudles/
             }
         ]
     },
