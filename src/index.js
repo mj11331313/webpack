@@ -18,3 +18,8 @@ class People{
 
 //测试jquery文件是否成功打包并引入：
 $('#div4').html('test for jquery');
+
+
+//json文件引用测试：
+let json = require('../author.json');
+$('#json').html(`作者: ${json.name} ，年龄: ${json.age}`);
