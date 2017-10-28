@@ -1,5 +1,11 @@
-#div2{
-    width: 200px;
-    height: 200px;
-    /* background: url(../images/9.jpg) no-repeat; */
+#div2 {
+  width: 200px;
+  height: 200px;
+  background: url(http://127.0.0.1:8082/images/e41b452158585fd4037321045358a47b.jpg);
+}
+
+#div3 {
+  background-color: #000;
+  width: 100px;
+  height: 100px;
 }
