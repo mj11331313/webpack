@@ -108,5 +108,10 @@ module.exports = {
         host: '127.0.0.1',
         port: 8082,
         compress: true
+    },
+    watchOptions:{
+        poll:1000,
+        aggregeateTimeout:500,
+        ignored:/node_muodles/
     }
 };

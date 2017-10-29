@@ -46,7 +46,7 @@ var People = function People(name, age) {
 
 //json文件引用测试：
 var json = __webpack_require__(5);
-(0, _jquery2.default)('#json').html('\u4F5C\u8005\u662F:' + json.name + '\uFF0C\u5E74\u9F84\u662F:' + json.age);
+(0, _jquery2.default)('#json').html('\u4F5C\u8005: ' + json.name + ' \uFF0C\u5E74\u9F84: ' + json.age);
 
 /***/ }),
 /* 2 */
