@@ -31,6 +31,7 @@ var a = 5;
 var add = function add(x, y) {
     return x + y;
 };
+document.write(add());
 
 var People = function People(name, age) {
     _classCallCheck(this, People);

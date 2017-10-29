@@ -5,8 +5,9 @@ var oDiv1 = document.getElementById('div1');
 oDiv1.innerHTML = "Hello World888!!!";
 
 //es6代码：
-let a=5;
-let add = (x,y) => x+y;
+let a=5,b=6;
+let add = (x,y) => {return x+y};
+document.write(`${a}+${b} = ${add(a,b)}`);
 
 
 class People{
